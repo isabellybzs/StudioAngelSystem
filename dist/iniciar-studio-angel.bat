@@ -12,7 +12,6 @@ if errorlevel 1 (
 
 if not exist "StudioAngelSystem.jar" (
     echo Arquivo StudioAngelSystem.jar nao encontrado nesta pasta.
-    echo Gere o executavel novamente pelo arquivo gerar-executavel.ps1.
     pause
     exit /b 1
 )

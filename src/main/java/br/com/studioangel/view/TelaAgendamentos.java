@@ -78,34 +78,34 @@ public class TelaAgendamentos extends JFrame {
         comboServico = new JComboBox<>();
         comboProfissional = new JComboBox<>();
         comboStatus = new JComboBox<>(StatusAgendamento.values());
-        campoData = Estilo.campoMascaraPrototipo(62, 274, 376, 44, "##/##/####");
-        campoHorario = Estilo.campoMascaraPrototipo(62, 348, 376, 44, "##:##");
+        campoData = Estilo.campoMascaraPrototipo(62, 222, 376, 44, "##/##/####");
+        campoHorario = Estilo.campoMascaraPrototipo(62, 287, 376, 44, "##:##");
 
         form.add(tela.label("Cliente:", 64, 0, 250, 30, 23));
         form.add(combo(62, 29, comboCliente));
-        form.add(tela.label("Servico:", 72, 74, 250, 30, 23));
-        form.add(combo(62, 103, comboServico));
-        form.add(tela.label("Profissional:", 78, 148, 250, 30, 23));
-        form.add(combo(62, 177, comboProfissional));
-        form.add(tela.label("Data:", 78, 244, 250, 30, 23));
+        form.add(tela.label("Servico:", 72, 65, 250, 30, 23));
+        form.add(combo(62, 94, comboServico));
+        form.add(tela.label("Profissional:", 78, 130, 250, 30, 23));
+        form.add(combo(62, 159, comboProfissional));
+        form.add(tela.label("Data:", 78, 195, 250, 30, 23));
         form.add(campoData);
-        form.add(tela.label("Horario:", 78, 318, 250, 30, 23));
+        form.add(tela.label("Horario:", 78, 260, 250, 30, 23));
         form.add(campoHorario);
-        form.add(tela.label("Status:", 78, 392, 250, 30, 23));
-        form.add(combo(62, 421, comboStatus));
+        form.add(tela.label("Status:", 78, 325, 250, 30, 23));
+        form.add(combo(62, 354, comboStatus));
 
-        JButton limpar = botao("Limpar", 36, 477, 110, 48);
-        limpar.addActionListener(e -> limparCampos());
-        JButton cadastrar = botao("Cadastrar", 152, 477, 120, 48);
+        JButton cadastrar = botao("Cadastrar", 58, 420, 200, 48);
         cadastrar.addActionListener(e -> salvar());
-        JButton atualizar = botao("Atualizar", 278, 477, 120, 48);
+        JButton atualizar = botao("Atualizar", 274, 420, 200, 48);
         atualizar.addActionListener(e -> atualizar());
-        JButton excluir = botao("Excluir", 404, 477, 100, 48);
+        JButton excluir = botao("Excluir", 58, 477, 200, 48);
         excluir.addActionListener(e -> excluir());
-        form.add(limpar);
+        JButton limpar = botao("Limpar", 274, 477, 200, 48);
+        limpar.addActionListener(e -> limparCampos());
         form.add(cadastrar);
         form.add(atualizar);
         form.add(excluir);
+        form.add(limpar);
         tela.add(form);
 
         JPanel lista = Estilo.painelArredondado(58, Color.WHITE);
@@ -170,7 +170,7 @@ public class TelaAgendamentos extends JFrame {
 
     private JButton botao(String texto, int x, int y, int w, int h) {
         JButton b = Estilo.botaoPrototipo(texto, x, y, w, h);
-        b.setFont(new Font("Segoe UI", Font.BOLD, 20));
+        b.setFont(new Font("Segoe UI", Font.BOLD, 24));
         return b;
     }
 

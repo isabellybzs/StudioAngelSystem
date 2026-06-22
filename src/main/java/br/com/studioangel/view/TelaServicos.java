@@ -58,18 +58,18 @@ public class TelaServicos extends JFrame {
         form.add(tela.label("DURACAO:", 84, 242, 240, 34, 25));
         campoDuracao = campo(52, 286, 376, 53);
         form.add(campoDuracao);
-        JButton limpar = botao("LIMPAR", 50, 415, 110, 55);
-        limpar.addActionListener(e -> limparCampos());
-        JButton cadastrar = botao("CADASTRAR", 166, 415, 120, 55);
+        JButton cadastrar = botao("Cadastrar", 58, 342, 200, 55);
         cadastrar.addActionListener(e -> salvar());
-        JButton atualizar = botao("ATUALIZAR", 292, 415, 120, 55);
+        JButton atualizar = botao("Atualizar", 274, 342, 200, 55);
         atualizar.addActionListener(e -> atualizar());
-        JButton excluir = botao("EXCLUIR", 418, 415, 100, 55);
+        JButton excluir = botao("Excluir", 58, 417, 200, 55);
         excluir.addActionListener(e -> excluir());
-        form.add(limpar);
+        JButton limpar = botao("Limpar", 274, 417, 200, 55);
+        limpar.addActionListener(e -> limparCampos());
         form.add(cadastrar);
         form.add(atualizar);
         form.add(excluir);
+        form.add(limpar);
         tela.add(form);
 
         JPanel lista = Estilo.painelArredondado(58, Color.WHITE);
@@ -98,7 +98,7 @@ public class TelaServicos extends JFrame {
 
     private JButton botao(String texto, int x, int y, int w, int h) {
         JButton b = Estilo.botaoPrototipo(texto, x, y, w, h);
-        b.setFont(new Font("Segoe UI", Font.BOLD, 23));
+        b.setFont(new Font("Segoe UI", Font.BOLD, 25));
         return b;
     }
 
